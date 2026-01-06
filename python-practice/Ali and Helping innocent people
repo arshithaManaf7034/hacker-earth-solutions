@@ -1,0 +1,16 @@
+tag = input().strip()
+
+# Rule 1: Letter must not be a vowel
+if tag[2] in "AEIOUY":
+    print("invalid")
+    exit()
+
+# Rule 2: Check only the required digit pairs
+pairs = [(0,1), (3,4), (4,5), (7,8)]
+
+for i, j in pairs:
+    if (int(tag[i]) + int(tag[j])) % 2 != 0:
+        print("invalid")
+        exit()
+
+print("valid")
