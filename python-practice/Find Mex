@@ -1,0 +1,17 @@
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+seen = set()
+mex = 0
+answer = []
+
+for x in arr:
+    seen.add(x)
+
+    while mex in seen:
+        mex += 1
+
+    answer.append(mex)
+
+print(*answer)
